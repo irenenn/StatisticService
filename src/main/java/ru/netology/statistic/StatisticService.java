@@ -59,4 +59,15 @@ public class StatisticService {
         return counter;
     }
 
+    public int belowAverage(long[] sales) {
+        long averageSale = average(sales);
+        int counter = 0;
+        for (long sale : sales) {
+            if (sale < averageSale) {
+                counter++;
+            }
+        }
+        return counter;
+    }
+
 }
